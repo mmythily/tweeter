@@ -1,0 +1,44 @@
+section.new-tweet{
+    margin: auto;
+    margin: 30px;
+    padding: 1em;
+    background-color: #eee;
+    border-radius: 10px;
+    display: inherit;
+    border: 1.5px solid #A6A49C;
+}
+
+textarea[placeholder]{
+    width: 100%;
+    overflow: auto;
+    padding: 5px;
+    font-size: 1em;
+}
+
+textarea {
+    border-bottom: black solid 1px;
+    margin: 3px;
+    font-size: 1.5em;
+}
+
+textarea {
+    margin: 5px 2px;
+}
+
+h2 {
+    border-bottom: black solid 1px;
+    margin: 3px;
+    font-size: 1.5em bold;
+}
+
+span.counter {
+    float: right;
+    padding: 20px 0 0px 0;
+}
+
+input[value] {
+    margin: 0 10px;
+    padding: 5px 10px;
+    border: #A6A49C solid 0.5px;
+    background-color: #00C087;
+}
