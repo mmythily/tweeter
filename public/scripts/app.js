@@ -50,15 +50,36 @@ const data = [
 
 
 function renderTweets(tweets) {
-    // loops through tweets
-      // calls createTweetElement for each tweet
-      // takes return value and appends it to the tweets container
+    tweets.forEach(tweet => {
+        $('#tweets-container').prepend(createTweetElement(tweet));
+    });
 }
 
 function createTweetElement(tweet) {
-    //let $tweet = $('<article>').addClass('tweet');
-    // ...
-    //return $tweet;
+    //$('#tweets-container').append($tweet);
+
+    let $tweet = 
+        `<article class='tweet'>
+            <header>
+                <img class='user' src='${tweet.user.avatars.small}'>
+                ${tweet.user.name}
+                <h6 class='handle'> ${tweet.user.handle} </h6>
+            </header>
+            <p>${tweet.content.text}</p>
+            <footer>
+                ${tweet.content.created_at}
+                <i class="fas fa-heart"></i>
+                <span class='glyphicon glyphicon-retweet'></span> 
+                <span class='glyphicon glyphicon-flag'></span> 
+            </footer>
+        </article>`
+    return $tweet;
+
 }
 
-renderTweets(data);
+
+$(document).ready(function() {
+
+    renderTweets(data)
+
+});
