@@ -17,12 +17,8 @@ textarea[placeholder]{
 
 textarea {
     border-bottom: black solid 1px;
-    margin: 3px;
-    font-size: 1.5em;
-}
-
-textarea {
     margin: 5px 2px;
+    font-size: 1.5em;
 }
 
 h2 {
