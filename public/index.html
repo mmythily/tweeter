@@ -7,8 +7,11 @@
     <!-- External CSS -->
     <link rel='stylesheet' href='/vendor/normalize-4.1.1.css' type='text/css' />
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
     <!-- App Font - Roboto Condensed-->
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i&display:swap' rel='stylesheet'>
+    <link rel='stylesheet'href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i&display:swap' >
     
     <!-- App CSS -->
     <link rel='stylesheet' href='/styles/layout.css' type='text/css' />
@@ -19,11 +22,13 @@
     <!-- Compose Section CSS -->
     <link rel='stylesheet' href='/styles/new-tweet.css' type='text/css' />
 
+    <!-- Tweets Container Section CSS -->
+    <link rel='stylesheet' href='/styles/tweet.css' type='text/css' />
+
     <!-- External JS -->
     <script type='text/javascript' src='/vendor/jquery-2.2.3.min.js'></script>
 
-    <!-- App JS -->
-    <script type='text/javascript' src='/scripts/app.js'></script>
+
   </head>
 
   <body>
@@ -45,22 +50,27 @@
             </form>
         </section>
         
-        <section id='tweets-container'></section>
-        `<article class='a-tweet'>
-          <header>
-              <img class='user' src=''>
-              'my Name'
-              <h6 class='handle'> @handle </h6>
-          </header>
-          <p>texting tweeting</p>
-          <footer>
-              5 days ago
-              <span class='glyphicon glyphicon-heart'></span> 
-              <span class='glyphicon glyphicon-retweet'></span> 
-              <span class='glyphicon glyphicon-flag'></span> 
-          </footer>
-      </article>`;
+        <section id='tweets-container'>
+          <article class='tweet'>
+            <header>
+                <img class='user' src='images/bird.png'>
+                my Name
+                <h6 class='handle'> @hacvcxndle </h6>
+            </header>
+            <p>texting tweeting</p>
+            <footer>
+                5 days ago
+                <i class="fas fa-heart"></i>
+                <span class='glyphicon glyphicon-retweet'></span> 
+                <span class='glyphicon glyphicon-flag'></span> 
+            </footer>
+          </article>
+        </section>
     </main>
-    <script type="text/javascript" src="/scripts/app.js"></script>
+        <!-- App JS -->
+        <script type='text/javascript' src='/scripts/app.js'></script>
+
+        <!-- Character Error Handling -->
+        <script type='text/javascript' src='/scripts/composer-char-counter.js'></script>
   </body>
 </html>
