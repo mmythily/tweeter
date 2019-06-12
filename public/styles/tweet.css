@@ -1,0 +1,62 @@
+article.a-tweet {
+    margin: auto;
+    margin-top: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: inherit;
+    border: 0.5px solid #A6A49C;
+    opacity: 0.7;
+}
+
+article.a-tweet:hover{
+    opacity: 1;
+}
+
+article.a-tweet header img.user {
+    border-style: none;
+    height: 50px;
+    width: 50px;
+}
+
+article.a-tweet header {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 1px;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    background-color: #eee;
+}
+
+article.a-tweet p {
+    padding: 10px;
+    font-size: 1.5em;
+    height: 100px;
+    overflow-x: auto;
+}
+
+article.a-tweet footer {
+    font-size: 1em;
+    border-top: 0.5px solid #A6A49C;
+    padding: 8px;
+}
+
+article.a-tweet:hover .glyphicon{
+    height: auto;
+    width: 20px;
+    float: right;
+    margin: 0 1px;
+    visibility: visible;
+}
+
+.glyphicon {
+    height: auto;
+    width: 20px;
+    float: right;
+    margin: 0 1px;
+    visibility: hidden;
+}
+
+h6.handle {
+    float:right;
+    font-size: .75em;
+}
