@@ -67,19 +67,40 @@ function createTweetElement(tweet) {
             </header>
             <p>${tweet.content.text}</p>
             <footer>
-                ${tweet.content.created_at}
+                ${tweet.created_at} days ago
                 <i class="fas fa-heart"></i>
                 <span class='glyphicon glyphicon-retweet'></span> 
                 <span class='glyphicon glyphicon-flag'></span> 
             </footer>
         </article>`
     return $tweet;
-
 }
 
 
 $(document).ready(function() {
 
-    renderTweets(data)
+    renderTweets(data);
 
+    const loadTweets = () => {
+        $.ajax({
+            url: '/tweets',
+            method: 'GET',
+            success: renderTweets,
+        });
+    }
+
+    $('form').submit(function( event ) {
+        event.preventDefault();
+        console.log($(this).serialize())
+        console.log($('#tweet-message').val());
+
+        $.ajax({
+            url:'/tweets',
+            type:'POST',
+            data: {
+                text: $('#tweet-message').val()
+            },
+            success: () => loadTweets()
+        });
+    });
 });
