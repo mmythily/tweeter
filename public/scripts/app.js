@@ -14,7 +14,7 @@ const createTweetElement = tweet => {
             </header>
             <p>${escape(tweet.content.text)}</p>
             <footer>
-                ${tweet.created_at} days ago
+                ${Date.now()} days ago
                 <i class="fas fa-heart"></i>
                 <span class='glyphicon glyphicon-retweet'></span> 
                 <span class='glyphicon glyphicon-flag'></span> 
