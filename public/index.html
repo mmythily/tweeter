@@ -27,6 +27,12 @@
 
     <!-- External JS -->
     <script type='text/javascript' src='/vendor/jquery-2.2.3.min.js'></script>
+
+    <!-- App JS -->
+    <script type='text/javascript' src='/scripts/app.js'></script>
+
+    <!-- Character Error Handling JS -->
+    <script type='text/javascript' src='/scripts/composer-char-counter.js'></script>
   </head>
 
   <body>
@@ -34,7 +40,8 @@
     <!-- Top nav bar (fixed) -->
     <nav id='nav-bar'>
       <img class='logo' src='/images/bird.png' >
-      <span class='header'>Tweeter</span>
+      <span class='header'> Tweeter </span>
+      <button id='compose'> Compose </button>
     </nav>
 
     <!-- Page-specific (main) content here -->
@@ -42,8 +49,10 @@
       <section class='new-tweet'>
         <h2>Compose Tweet</h2>
         <form action='/tweets' method='POST'>
-          <textarea id='tweet-message' name='text' placeholder='What are you humming about?'></textarea>
-          <input type='submit' value='Tweet'>
+          <textarea id='tweet-message' name='text' placeholder='What are you humming about?'> </textarea>
+          <span id="error1"> Please tweet something</span>
+          <span id="error2"> You have exceeded the limit!</span>
+          <input id='tweet-btn' type='submit' value='Tweet'>
           <span class='counter'>140</span>
         </form>
       </section>
@@ -53,10 +62,6 @@
       </section>
     </main>
 
-        <!-- App JS -->
-        <script type='text/javascript' src='/scripts/app.js'></script>
-
-        <!-- Character Error Handling -->
-        <script type='text/javascript' src='/scripts/composer-char-counter.js'></script>
+        
   </body>
 </html>

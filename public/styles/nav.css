@@ -2,7 +2,7 @@
     position: fixed;
     height: 80px;
     width: 100%;
-    background-color: #00a087;
+    background-color: #019e87;
     color: #e8fdff;
     padding: 0 2em;
     z-index: 1;
@@ -20,4 +20,20 @@
     height: 80px;
     line-height: 80px;
     float: left;
+}
+
+#compose {
+    float: right;
+    border: 1px solid black;
+    padding: 20px;
+    line-height: 75%;
+    border-radius: 10px;
+    font-size: 25px;
+    margin:9px;
+    background-color: #ddfcff;
+}
+
+#compose:hover {
+    color: #019e87;
+    background-color:white;
 }

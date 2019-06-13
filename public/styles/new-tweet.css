@@ -39,3 +39,7 @@ input[value] {
     border: #A6A49C solid 0.5px;
     background-color: #00C087;
 }
+
+#error1 #error2  {
+    visibility: hidden;
+}
