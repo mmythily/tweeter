@@ -1,18 +1,10 @@
+// const escape = (str) => {
+//     var div = document.createElement('div');
+//     div.appendChild(document.createTextNode(str));
+//     return div.innerHTML;
+// }
 
-const renderTweets = (tweets) => {
-    tweets.forEach( tweet => {
-        $('#tweets-container').prepend(createTweetElement(tweet));
-    });
-}
-
-const createTweetElement = (tweet) =>{
-    
-    const escape = (str) => {
-        var div = document.createElement('div');
-        div.appendChild(document.createTextNode(str));
-        return div.innerHTML;
-    }
-    
+const createTweetElement = tweet => {
     let $tweet = 
         `<article class='tweet'>
             <header>
@@ -28,21 +20,38 @@ const createTweetElement = (tweet) =>{
                 <span class='glyphicon glyphicon-flag'></span> 
             </footer>
         </article>`
-        
     return $tweet;
 }
 
+const renderTweets = tweets => {
+    $('#tweets-container').empty();
+    tweets.forEach( tweet => {
+        $('#tweets-container').prepend(createTweetElement(tweet));
+    });
+}
+
+
 const postTweets = () => {
-    $('form').submit( event => {
+    $('.new-tweet form').submit( event => {
         event.preventDefault();
-        $.ajax({
-            url:'/tweets',
-            type:'POST',
-            data: {
-                text: $('#tweet-message').val()
-            },
-            success: () => loadTweets()
-        });
+        if ($('.new-tweet textarea').val().length < 1) {
+            $('#error').text('Say something').show();
+        }
+        else if ($('.new-tweet textarea').val().length > 140) {
+            $('#error').text('Character length too long!').show();
+        } 
+        else {
+            $.ajax({
+                url:'/tweets',
+                type:'POST',
+                data: {
+                    text: $('#tweet-message').val()
+                },
+                success: () => {
+                    loadTweets();
+                }
+            });
+        }
     });
 }
 
@@ -54,31 +63,7 @@ const loadTweets = () => {
     });
 }
 
-const toggle = () => {
-    $('#compose').click( () => {
-        $('.new-tweet').slideToggle('slow', () => {
-        $('#tweet-message').select();
-        });
-    });
-}
-
-const handleErrors = () => {
-    //$('#tweet-btn').
-    if ($('#tweet-message').val() === ''){
-        $('#error1').slideDown();
-    }
-    else if ($('#tweet-message').val().length > 140) {
-        $('#error2').slideDown();
-    }
-    else {
-        $('#error1').hidden()
-        $('#error2').hidden()
-    }
-}
-
 $(document).ready( () => {
-    toggle();
     postTweets();
     loadTweets();
-    handleErrors();
 });

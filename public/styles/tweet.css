@@ -30,10 +30,10 @@ article.tweet header {
 }
 
 article.tweet p {
-    padding: 10px;
-    font-size: 1.5em;
+    padding: 0 8px;
+    font-size: 1.25em;
     height: 100px;
-    word-break: break-word;
+    word-break: break-all;
 }
 
 article.tweet footer {

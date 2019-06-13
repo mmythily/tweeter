@@ -13,13 +13,13 @@ textarea[placeholder]{
     overflow: auto;
     padding: 5px;
     font-size: 1em;
+    height: 120px;
 }
 
 textarea {
     border-bottom: black solid 1px;
     margin: 5px 2px;
     font-size: 1.5em;
-    
 }
 
 h2 {
@@ -40,6 +40,7 @@ input[value] {
     background-color: #00C087;
 }
 
-#error1 #error2  {
-    visibility: hidden;
+#error {
+    display: inline;
+    color: brown;
 }
