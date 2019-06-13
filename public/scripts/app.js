@@ -55,7 +55,7 @@ const loadTweets = () => {
 }
 
 const toggle = () => {
-    $('#compose').on('click', () => {
+    $('#compose').click( () => {
         $('.new-tweet').slideToggle('slow', () => {
         $('#tweet-message').select();
         });
