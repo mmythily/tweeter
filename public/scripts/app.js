@@ -1,8 +1,8 @@
-// const escape = (str) => {
-//     var div = document.createElement('div');
-//     div.appendChild(document.createTextNode(str));
-//     return div.innerHTML;
-// }
+const escape = (str) => {
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+}
 
 const createTweetElement = tweet => {
     let $tweet = 
