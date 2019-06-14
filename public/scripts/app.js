@@ -1,11 +1,12 @@
+//Cross site scripting safe
 const escape = (str) => {
     var div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
 }
 
+//Converts milliseconds to appropriate time for user readability
 const convertTime = (milsec) => {
-
     const sec = (Date.now() - milsec ) / 1000;
     const min = sec / 60;
     const hour = min / 60;
@@ -22,6 +23,7 @@ const convertTime = (milsec) => {
     }
 }
 
+//dynamic styling of a created tweet
 const createTweetElement = tweet => {
     let $tweet = 
         `<article class='tweet'>
@@ -41,6 +43,7 @@ const createTweetElement = tweet => {
     return $tweet;
 }
 
+//tweet will be prepended based on posted time.
 const renderTweets = tweets => {
     $('#tweets-container').empty();
     tweets.forEach( tweet => {
@@ -48,7 +51,7 @@ const renderTweets = tweets => {
     });
 }
 
-
+// posts tweet from form and shows user prompts if tweet is too short or too long
 const postTweets = () => {
     $('.new-tweet form').submit( event => {
         event.preventDefault();
@@ -73,6 +76,7 @@ const postTweets = () => {
     });
 }
 
+//Fetches tweets from mongo db to display on page.
 const loadTweets = () => {
     $.ajax({
         url: '/tweets',
@@ -82,6 +86,6 @@ const loadTweets = () => {
 }
 
 $(document).ready( () => {
-    postTweets();
     loadTweets();
+    postTweets();
 });
