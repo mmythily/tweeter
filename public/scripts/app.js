@@ -72,6 +72,7 @@ const postTweets = () => {
                     loadTweets();
                 }
             });
+            $('#tweet-message').empty();
         }
     });
 }

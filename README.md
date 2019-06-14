@@ -22,11 +22,8 @@ In this project I practised HTML, CSS, JS, jQuery and AJAX front-end skills. Thi
 
 ## Screenshots
 
-- Here is the web page when loaded
-<img src="composeuntoggles.png">
+!["Here is the web page when loaded"](https://github.com/mmythily/tweeter/raw/master/compose-untoggled.png)
 
-- Here is the page when compose button is clicked
-<img src="composetoggle.png">
+!["When compose button is clicked"](https://github.com/mmythily/tweeter/raw/master/compose-toggled.png)
 
-- Here is a example of a error displayed when the tweet length is too long.
-<img src="too-long-error.png">
+!["An example of a error displayed when the tweet length is too long"](https://github.com/mmythily/tweeter/raw/master/too-long-error.png)
