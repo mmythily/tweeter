@@ -15,9 +15,9 @@ const createTweetElement = tweet => {
             <p>${escape(tweet.content.text)}</p>
             <footer>
                 ${Date.now()} days ago
-                <i class="fas fa-heart"></i>
-                <span class='glyphicon glyphicon-retweet'></span> 
-                <span class='glyphicon glyphicon-flag'></span> 
+                <i class="fa fa-heart"></i>
+                <i class="fa fa-retweet"></i>
+                <i class="fa fa-flag"></i>
             </footer>
         </article>`
     return $tweet;

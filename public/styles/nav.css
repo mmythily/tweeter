@@ -25,15 +25,20 @@
 #compose {
     float: right;
     border: 1px solid black;
-    padding: 20px;
+    padding: 15px;
     line-height: 75%;
     border-radius: 10px;
     font-size: 25px;
-    margin:9px;
+    margin: 10px 20px;
     background-color: #ddfcff;
+}
+
+#compose .fa{
+    float: left;
 }
 
 #compose:hover {
     color: #019e87;
     background-color:white;
 }
+

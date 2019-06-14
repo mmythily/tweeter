@@ -42,12 +42,16 @@ article.tweet footer {
     padding: 8px;
 }
 
-.fas .glyphicon {
+article:hover .fa {
+    visibility: visible;
+}
+article .fa {
     height: auto;
     width: 20px;
     float: right;
-    margin: 0 1px;
-    visibility: visible;
+    margin: 0 4px;
+    visibility: hidden;
+    padding: 1px 4px;
 }
 
 h6.handle {
