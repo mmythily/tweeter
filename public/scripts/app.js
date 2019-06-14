@@ -4,6 +4,24 @@ const escape = (str) => {
     return div.innerHTML;
 }
 
+const convertTime = (milsec) => {
+
+    const sec = (Date.now() - milsec ) / 1000;
+    const min = sec / 60;
+    const hour = min / 60;
+    const day = hour / 24;
+
+    if ( min < 60 ) {
+        return `${Math.floor(min)} minutes ago`;
+    }
+    else if ( min > 60 ) {
+        return `${Math.floor(hour)} hour ago`;
+    }
+    else if ( hour > 24 ) {
+        return `${Math.floor(day)} days ago`;
+    }
+}
+
 const createTweetElement = tweet => {
     let $tweet = 
         `<article class='tweet'>
@@ -14,7 +32,7 @@ const createTweetElement = tweet => {
             </header>
             <p>${escape(tweet.content.text)}</p>
             <footer>
-                ${Date.now()} days ago
+                ${convertTime(tweet.created_at)}
                 <i class="fa fa-heart"></i>
                 <i class="fa fa-retweet"></i>
                 <i class="fa fa-flag"></i>
